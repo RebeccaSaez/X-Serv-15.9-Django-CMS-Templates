@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Agenda de Rebeca</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+</head>
+
+<body>
+
+<div id="wrapper">
+
+	<div id="header">
+		<h1>Agenda de Rebeca</h1>
+	</div>
+
+	<div id="menu">
+		<ul>
+			<li><a href="https://twitter.com/RebeccaSaez">Twitter</a></li>
+			<li><a href="https://www.facebook.com/rebeca.saezdiazguerra">Facebook</a></li>
+			<li><a href="https://instagram.com/rebeccasaez/">Instagram</a></li>
+			<li><a href="https://www.linkedin.com/pub/rebeca-s%C3%A1ez-d%C3%ADaz-guerra/76/381/716">Linkedin</a></li>
+		</ul>
+	</div>
+
+	<div id="sidebar">
+		<div id="feed">
+			<a class="feed-button" href="#">&nbsp;</a>
+		</div>
+		<ul>
+			<li><a href="#">Link One</a></li>
+			<li><a href="#">Link Two</a></li>
+			<li><a href="#">Link Three</a></li>
+			<li><a href="#">Link Four</a></li>
+			<li><a href="#">Link Five</a></li>
+		</ul>
+		<div id="sidebar-bottom">
+			&nbsp;
+		</div>
+	</div>
+
+	<div id="content">
+		<div id="ad-top">
+			<!-- Insert 468x60 banner advertisement -->
+		</div>
+		<div class="entry">
+			<div class="entry-title">{{ recurso }}</a></div>
+			<div class="date">{{ fecha }}</div>
+			<p>{{ contenido }}</p>
+            {% if lista %}
+                <ul>
+                    {% for i in lista %}
+                        <li><a href="annotated/{{ i.name }}">{{ i.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <p>{{ mensaje_out }}</p>
+            <p><a href="{{ link_out }}"> {{ name_out }} <a></p>
+			<div class="comments"><a href="#">0 comments</a></div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div id="footer-valid">
+			<a href="https://twitter.com/RebeccaSaez">@RebeccaSaez</a>
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>
